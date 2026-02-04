@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
+
+:root {
+    --gameBoardSize: 80vh;
+    --gameBoardSpacer: 15px;
+}
+
+#gameBoard {
+    position: relative;
+    width: var(--gameBoardSize);
+    height: var(--gameBoardSize);
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: var(--gameBoardSpacer)
+}
+
+.gameSpace {
+    position: relative;
+    background-color: white;
+    font-size: 10rem;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Annie Use Your Telescope", cursive;
+    overflow: hidden;
+
+}
