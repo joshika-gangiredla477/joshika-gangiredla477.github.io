@@ -1,16 +1,21 @@
 //javascript for interactive concentration game for 1 player
 
+//new function to flip card when clicked
+function flipCard() {
+    this.classList.add("clicked");
+}
+
 //run this code when the DOM loads
 document.addEventListener("DOMContentLoaded", function(e) {
 
-    //randomize cards
+    //get handles to game elements 
     let allCards = document.querySelectorAll(".card");
-    let gameBoard = document.querySelector = document.querySelector("#");
+    let gameBoard = document.querySelector = document.querySelector("#gameBoard");
 
-    //loop through all the cards
+    //randomize cards by looping through all the games cards
     for (x = 0; x < allCards.length; x++) {
         let randNum = Math.floor(Math.random() * allCards.length);
-        gameBoard.insertBefore(allCards[x], gameboard.children[randNum]);
+        gameBoard.insertBefore(allCards[x], gameBoard.children[randNum]);
         
     }
 

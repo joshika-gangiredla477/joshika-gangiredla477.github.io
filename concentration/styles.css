@@ -55,7 +55,7 @@ body {
   transform-style: preserve-3d;
 }
 
-.card:hover .cardContent {
+.card.clicked .cardContent {
   transform: rotateY(180deg);
 }
 
