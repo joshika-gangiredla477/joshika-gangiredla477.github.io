@@ -1,0 +1,174 @@
+/* styles for concentration */
+/*
+To achieve the flipping effect on a mouse-over (hover), we need to position and style the nest of DOM objects with a handful of special 3D-rotation CSS properties, a transform rotation applied on :hover, and transitions to make the rotations apply smoothly.
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cardSize: 250px;
+}
+
+/********************************** Title and Body Styling */
+
+
+body {
+  font-family: system-ui, sans-serif;
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+}
+
+.title {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  background: rgba(255,255,255,0.08);
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  backdrop-filter: blur(10px);}
+
+/********************************** General Card styling */
+.card {
+  position: relative;
+  width: var(--cardSize);
+  height: var(--cardSize);
+  perspective: 500px; /* special CSS property relevant to 3D flips */
+  margin-bottom: 1rem;
+}
+
+
+.cardContent {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .cardContent {
+  transform: rotateY(180deg);
+}
+
+.cardTop,
+.cardBottom {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgb(255, 129, 255);
+  text-align: center;
+  font-size: 42px;
+  backface-visibility: hidden;
+}
+
+.cardTop {
+  background-color: rgb(255, 129, 255);
+  color: #eee;
+}
+
+.cardBottom {
+  background-color: #eee;
+  color: rgb(255, 129, 255);
+  transform: rotateY(180deg);
+}
+
+/********************************** Specific Card Styling */
+
+.pair1 .cardBottom { 
+  background-image: url(tp5images/pair1.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.pair2 .cardBottom {   
+  background-image: url(tp5images/pair2.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+.pair3 .cardBottom {   
+  background-image: url(tp5images/pair3.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.pair4 .cardBottom {   
+  background-image: url(tp5images/pair4.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.pair5 .cardBottom {   
+  background-image: url(tp5images/pair5.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.pair6 .cardBottom {   
+  background-image: url(tp5images/pair6.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.pair7 .cardBottom {   
+  background-image: url(tp5images/pair7.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.pair8 .cardBottom {   
+  background-image: url(tp5images/pair8.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/********************************** gameboard formatting */
+
+#gameBoard {
+  display: grid;
+  grid-template-columns: repeat(4, var(--cardSize));
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 2rem;
+  background: rgba(255,255,255,0.05);
+  border-radius: 2rem;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+@media screen and (orientation: landscape) {
+
+  :root {
+    --cardSize: 10vw;
+  }
+
+}
+
+@media screen and (orientation: portrait) {
+
+  :root {
+    --cardSize: 20vw;
+  }
+
+  #gameBoard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
