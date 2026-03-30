@@ -10,9 +10,29 @@ function flipCard() {
     let allClickedCards = document.querySelectorAll(".clicked");
 
     //only proceed if all there are less than two cards
-    if (allClickedCards.length < 2)
-    this.classList.add("clicked");
-    console.log("clicked!")
+    if (allClickedCards.length < 2) {
+
+        //add clicked class to clicked card
+        this.classList.add("clicked");
+        console.log("clicked!")
+
+    }
+    
+    //get a fresh list of clicked cards
+    allClickedCards = document.querySelectorAll(".clicked");
+    
+    if (allClickedCards.length == 2) {
+
+        let card1 = allClickedCards[0].classList.toString();
+        let card2 = allClickedCards[1].classList.toString();
+
+        if (card1 == card2) {
+            console.log("a match");
+        } else {
+            console.log("not a match");
+        }
+
+    }
 }
 
 //run this code when the DOM loads
