@@ -81,6 +81,10 @@ body {
   transform: rotateY(180deg);
 }
 
+.matched {
+  opacity: 0;
+}
+
 /********************************** Specific Card Styling */
 
 .pair1 .cardBottom { 

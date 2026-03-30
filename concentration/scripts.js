@@ -23,11 +23,18 @@ function flipCard() {
     
     if (allClickedCards.length == 2) {
 
+        //get the class list of each card as a string
         let card1 = allClickedCards[0].classList.toString();
         let card2 = allClickedCards[1].classList.toString();
 
+        //if the class list matches -- its a pair -- else -- its not a pait
         if (card1 == card2) {
             console.log("a match");
+            allClickedCards[0].classList.add("matched");
+            allClickedCards[1].classList.add("matched");
+            allClickedCards[0].classList.remove("clicked");
+            allClickedCards[1].classList.remove("clicked");
+
         } else {
             console.log("not a match");
         }
