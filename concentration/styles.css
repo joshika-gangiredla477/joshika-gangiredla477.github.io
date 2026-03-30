@@ -71,9 +71,8 @@ body {
 }
 
 .cardTop {
-  /*background-color: rgb(255, 129, 255);
-  color: #eee;*/
-  pointer-events: none;
+  background-color: rgb(255, 129, 255);
+  color: #eee;
 }
 
 .cardBottom {
