@@ -5,6 +5,12 @@ console.log("JS LOADED!")
 
 //new function to flip card when clicked
 function flipCard() {
+
+    //get all the clicked card loaded
+    let allClickedCards = document.querySelectorAll(".clicked");
+
+    //only proceed if all there are less than two cards
+    if (allClickedCards.length < 2)
     this.classList.add("clicked");
     console.log("clicked!")
 }
