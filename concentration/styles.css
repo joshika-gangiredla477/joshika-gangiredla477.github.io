@@ -83,6 +83,7 @@ body {
 
 .matched {
   opacity: 0;
+  transition-delay: 2s;
 }
 
 /********************************** Specific Card Styling */

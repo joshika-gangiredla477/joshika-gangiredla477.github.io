@@ -2,6 +2,13 @@
 
 console.log("JS LOADED!")
 
+//clear clicked classes
+function clearClicks() {
+    let allClickedCards = document.querySelectorAll(".clicked");
+    for(let eachCard of allClickedCards) {
+        eachCard.classList.remove("clicked");
+    }
+}
 
 //new function to flip card when clicked
 function flipCard() {
@@ -32,8 +39,8 @@ function flipCard() {
             console.log("a match");
             allClickedCards[0].classList.add("matched");
             allClickedCards[1].classList.add("matched");
-            allClickedCards[0].classList.remove("clicked");
-            allClickedCards[1].classList.remove("clicked");
+            window.setTimeout(clearClicks, 2000);
+            console.log("transition complete");
 
         } else {
             console.log("not a match");
