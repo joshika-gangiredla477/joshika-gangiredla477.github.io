@@ -71,8 +71,9 @@ body {
 }
 
 .cardTop {
-  background-color: rgb(255, 129, 255);
-  color: #eee;
+  /*background-color: rgb(255, 129, 255);
+  color: #eee;*/
+  pointer-events: none;
 }
 
 .cardBottom {
@@ -84,56 +85,56 @@ body {
 /********************************** Specific Card Styling */
 
 .pair1 .cardBottom { 
-  background-image: url(tp5images/pair1.jpeg);
+  background-image: url(images/pair1.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .pair2 .cardBottom {   
-  background-image: url(tp5images/pair2.jpeg);
+  background-image: url(images/pair2.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
 }
 .pair3 .cardBottom {   
-  background-image: url(tp5images/pair3.jpeg);
+  background-image: url(images/pair3.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .pair4 .cardBottom {   
-  background-image: url(tp5images/pair4.jpeg);
+  background-image: url(images/pair4.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .pair5 .cardBottom {   
-  background-image: url(tp5images/pair5.jpeg);
+  background-image: url(images/pair5.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .pair6 .cardBottom {   
-  background-image: url(tp5images/pair6.jpeg);
+  background-image: url(images/pair6.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .pair7 .cardBottom {   
-  background-image: url(tp5images/pair7.jpeg);
+  background-image: url(images/pair7.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .pair8 .cardBottom {   
-  background-image: url(tp5images/pair8.jpeg);
+  background-image: url(images/pair8.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
