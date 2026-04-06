@@ -11,6 +11,7 @@ To achieve the flipping effect on a mouse-over (hover), we need to position and 
 
 :root {
   --cardSize: 250px;
+  --timeDelay: 1s;
 }
 
 /********************************** Title and Body Styling */
@@ -23,8 +24,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-  color: white;
+  background-image: url(/concentration/images/bg.jpeg);
+  color: rgb(10, 9, 9);
 }
 
 .title {
@@ -35,7 +36,8 @@ body {
   background: rgba(255,255,255,0.08);
   padding: 1rem 2rem;
   border-radius: 2rem;
-  backdrop-filter: blur(10px);}
+  backdrop-filter: blur(10px);
+}
 
 /********************************** General Card styling */
 .card {
@@ -44,6 +46,7 @@ body {
   height: var(--cardSize);
   perspective: 500px; /* special CSS property relevant to 3D flips */
   margin-bottom: 1rem;
+  transition: opacity 1s;
 }
 
 
@@ -55,7 +58,7 @@ body {
   transform-style: preserve-3d;
 }
 
-.card:hover .cardContent {
+.card.clicked .cardContent {
   transform: rotateY(180deg);
 }
 
@@ -64,21 +67,41 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  border: 2px solid rgb(255, 129, 255);
+  border: 2px solid rgb(47, 46, 71);
+  border-radius: 2vh;
   text-align: center;
   font-size: 42px;
   backface-visibility: hidden;
 }
 
 .cardTop {
-  background-color: rgb(255, 129, 255);
+  background-color: rgb(45, 54, 101);
   color: #eee;
 }
 
 .cardBottom {
   background-color: #eee;
-  color: rgb(255, 129, 255);
+  color: rgb(45, 54, 101);
   transform: rotateY(180deg);
+}
+
+.matched {
+    opacity:0;
+    transition-delay: var(--timeDelay);
+}
+
+#turnCount {
+    min-width: 30vh;
+    min-height: 10vh;
+    color: rgb(45, 54, 101);
+    border-radius: 1rem;
+    text-align: center;
+    padding: 2vh;
+    margin: 5vh;
+    backdrop-filter: blur(10px);
+    position: relative;
+    flex: auto;
+
 }
 
 /********************************** Specific Card Styling */
@@ -141,6 +164,46 @@ body {
 
 
 /********************************** gameboard formatting */
+
+.gameContainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.sidePanel {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#turnCount {
+  width: 180px;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 600;
+}
+
+#turnCount p {
+  font-size: 1rem;
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+}
+
+#turnCount span {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: rgb(45, 54, 101);
+}
 
 #gameBoard {
   display: grid;
