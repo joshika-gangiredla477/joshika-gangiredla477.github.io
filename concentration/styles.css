@@ -91,18 +91,34 @@ body {
 }
 
 #turnCount {
-    min-width: 30vh;
-    min-height: 10vh;
-    color: rgb(45, 54, 101);
-    border-radius: 1rem;
-    text-align: center;
-    padding: 2vh;
-    margin: 5vh;
-    backdrop-filter: blur(10px);
-    position: relative;
-    flex: auto;
+  grid-column: 1 / -1; /* spans ALL columns */
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 
+  padding: 1rem;
+  margin-top: 1rem;
+
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+
+  font-weight: 600;
 }
+
+#turnCount p {
+  opacity: 0.8;
+}
+
+#turnCount span {
+  font-weight: bold;
+  color: rgb(45, 54, 101);
+}
+
+
+
 
 /********************************** Specific Card Styling */
 
@@ -171,39 +187,7 @@ body {
   gap: 2rem;
 }
 
-.sidePanel {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
 
-#turnCount {
-  width: 180px;
-  padding: 1.5rem;
-  border-radius: 1.5rem;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  font-weight: 600;
-}
-
-#turnCount p {
-  font-size: 1rem;
-  opacity: 0.8;
-  margin-bottom: 0.5rem;
-}
-
-#turnCount span {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: rgb(45, 54, 101);
-}
 
 #gameBoard {
   display: grid;
@@ -214,6 +198,44 @@ body {
   background: rgba(255,255,255,0.05);
   border-radius: 2rem;
   box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* popup background */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none; /* hidden by default */
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.6);
+  z-index: 1000;
+}
+
+/* popup box */
+.popupContent {
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  color: rgb(45, 54, 101);
+}
+
+.popupContent h2 {
+  margin-bottom: 1rem;
+}
+
+.popupContent button {
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  background: rgb(45, 54, 101);
+  color: white;
+  cursor: pointer;
 }
 
 @media screen and (orientation: landscape) {

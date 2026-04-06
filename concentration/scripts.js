@@ -22,8 +22,14 @@ function clearClicks() {
         let matchedCards = document.querySelectorAll(".matched");
         if (allCards.length == matchedCards.length) {
             //player matched all cards
-            document.querySelector("#winning").innerHTML = "you won!";
+           
+             if (allCards.length == matchedCards.length) {
+                document.querySelector("#winPopup").style.display = "flex";
+         }
+
+
         }
+
 }
 
 
