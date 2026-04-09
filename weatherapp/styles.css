@@ -1,0 +1,168 @@
+/* styles for the weather app */
+/******************* Font family */
+@import url("https://use.typekit.net/lvf8vjw.css");
+
+/******************* general layout */
+
+:root {
+    ----cardWidth: 70vw;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding:0;
+    margin:0;
+    font-family: Helvetica, serif;
+}
+
+main {
+    min-height:100vh;
+    /* soft sky gradient */
+    background: linear-gradient(
+        180deg,
+        #6fb3ff 0%,
+        #cfe9ff 100%
+    );
+    display:flex;
+    flex-direction:column;
+    display:flex;
+    flex-direction:column;
+}
+
+/************************************ current info */
+
+#currentInfo {
+    padding:2rem;
+    color:white;
+    flex: 1;              
+    display:flex;             
+    flex-direction:column;
+    justify-content:center;    
+    align-items:center;  
+}
+
+#location {
+    font-size:1.5rem;
+    opacity:0.9;
+}
+
+#currentTemp {
+    font-size:6rem;
+    font-weight:700;
+    line-height:1;
+}
+
+#currentStatus {
+    font-size:2rem;
+}
+
+/************************************ current humidity */
+
+#details {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    padding:0.5rem;
+    margin-top:auto;
+}
+
+.detailBox {
+    padding:1.5rem;
+    background:white;
+
+    border-radius:14px;
+    margin:0.5rem;
+
+    /* ⭐ floating card effect */
+    box-shadow:0 6px 16px rgba(0,0,0,0.08);
+}
+
+.label {
+    font-size:0.9rem;
+    color:#666;
+}
+
+.value {
+    font-size:1.5rem;
+    font-weight:600;
+}
+
+/**************** FORECAST SCROLL AREA */
+
+#futureInfo {
+    display:flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem;
+
+    background:transparent;
+
+    scrollbar-width:none;
+}
+
+#futureInfo::-webkit-scrollbar {
+    display:none;
+}
+
+.futureDay {
+    flex: 0 0 auto;
+    width: var(--cardWidth);
+    background:white;
+    padding:1.2rem;
+    border-radius:14px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    display:flex;
+    flex-direction:column;
+    gap:0.5rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.futureDay:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.18);
+}
+
+.day {
+    font-weight:700;
+}
+
+.tempRange {
+    font-size:1.6rem;
+    font-weight:600;
+}
+
+.status {
+    font-size:1.1rem;
+}
+
+.wind {
+    font-size:0.9rem;
+    color:#666;
+}
+
+/**************** RESPONSIVE (DESKTOP/LANDSCAPE) */
+
+@media (orientation: landscape) {
+
+    :root {
+        --cardWidth: 30vw;
+    }
+
+    #location {
+        font-size:2rem;
+        opacity:0.9;
+    }
+
+    #currentTemp {
+        font-size:8rem;
+        font-weight:700;
+        line-height:1;
+    }
+
+    #currentStatus {
+        font-size:3rem;
+    }
+
+}
