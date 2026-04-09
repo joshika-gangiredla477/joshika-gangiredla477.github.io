@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //get sample data
     getData(sampleURL, sampleOptions).then(function (result) {
         // code to operate on “result” JSON object
-        console.log(result);
+        console.log(result.location.name);
     });
 
 
