@@ -84,7 +84,7 @@ main {
     color:#666;
 }
 
-.value {
+.humidityValue, .windValue {
     font-size:1.5rem;
     font-weight:600;
 }
