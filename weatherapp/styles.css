@@ -152,35 +152,102 @@ main {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: white;
-    backdrop-filter: blur(8px);
+
+    background: rgba(0, 0, 0, 0.2); /* soft dark tint instead of white */
+    backdrop-filter: blur(6px);
+
     z-index: 1000;
 }
 
 #modalForm {
     position: fixed;
     display: none;
-    width: 80vh;
-    height: 60vh;
-    left: 10vw;
-    top: 20vh;
-    padding: 1em;
-    background-color: white;
-    color: black;
+    width: 90%;
+    max-width: 400px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
     z-index: 1001;
 }
 
 #findLocation {
-    position: absolute;
-    top: 0;
-    right: 0;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    border: none;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(6px);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
     z-index: 999;
+}
+
+#findLocation:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+#findLocation:active {
+    transform: scale(0.96);
 }
 
 body.showModal #modalCover, 
 body.showModal #modalForm{
     display: block;
 
+}
+
+#locationForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#locationBox {
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+
+    border-radius: 10px;
+    border: 1px solid #ccc;
+
+    outline: none;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+#locationBox:focus {
+    border: 1px solid #6fb3ff;
+    box-shadow: 0 0 0 3px rgba(111,179,255,0.2);
+}
+
+#locationForm button {
+    padding: 0.8rem;
+    border-radius: 10px;
+    border: none;
+
+    background: #6fb3ff;
+    color: white;
+
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+#locationForm button:hover {
+    background: #4da3ff;
+}
+
+#locationForm button:active {
+    transform: scale(0.97);
 }
 
 /**************** RESPONSIVE (DESKTOP/LANDSCAPE) */
