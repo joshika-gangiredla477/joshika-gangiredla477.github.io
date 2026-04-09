@@ -142,6 +142,47 @@ main {
     color:#666;
 }
 
+/*************************** modal window stuff */
+
+
+#modalCover {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+}
+
+#modalForm {
+    position: fixed;
+    display: none;
+    width: 80vh;
+    height: 60vh;
+    left: 10vw;
+    top: 20vh;
+    padding: 1em;
+    background-color: white;
+    color: black;
+    z-index: 1001;
+}
+
+#findLocation {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 999;
+}
+
+body.showModal #modalCover, 
+body.showModal #modalForm{
+    display: block;
+
+}
+
 /**************** RESPONSIVE (DESKTOP/LANDSCAPE) */
 
 @media (orientation: landscape) {

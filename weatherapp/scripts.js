@@ -1,5 +1,18 @@
 /* javascript to enabled drag-scrolling */
 
+//weather API global variables
+const weatherURL = 'https://weatherapi-com.p.rapidapi.com/forecast.json?days=3&q=';
+const weatherOptions = {
+    method: 'GET',
+    headers: {
+        'x-rapidapi-key': 'a1c3acf72fmsh4104426e5e5d10fp12ae83jsnb8163d80c7e9',
+        'x-rapidapi-host': 'weatherapi-com.p.rapidapi.com',
+        'Content-Type': 'application/json'
+    }
+};
+
+
+
 //preparing variables
 let scrollingBox;
 let offsetLeftStart;
@@ -33,7 +46,7 @@ function updateWeather(weatherObject) {
     document.querySelector("#currentTemp span").innerHTML = weatherObject.current.temp_f;
     document.querySelector("#currentStatus").innerHTML = weatherObject.current.condition.text;
     document.querySelector(".humidityValue span").innerHTML = weatherObject.current.humidity;
-    
+
     //output wind speed and direction in a combined string
     let windspeed = weatherObject.current.wind_mph;
     let winddirection = weatherObject.current.wind_dir;
@@ -46,15 +59,15 @@ function updateWeather(weatherObject) {
 
         //update future temp
         futureDays[i].querySelector(".tempRange span").innerHTML = weatherObject.forecast.forecastday[i].day.maxtemp_f;
-       
+
         //update future windspeed
         windspeed = weatherObject.forecast.forecastday[i].day.maxwind_mph;
         futureDays[i].querySelector(".wind").innerHTML = windspeed + "mph ";
-        
+
         //update future condition status
         futureDays[i].querySelector(".status").innerHTML = weatherObject.forecast.forecastday[i].day.condition.text;
 
-     }
+    }
 
 }
 
@@ -84,6 +97,61 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!isMoving) return;
         scrollingBox.scrollLeft = scrollLeftStart - (e.pageX - offsetLeftStart - scrollingBox.offsetLeft);
     });
+
+
+
+
+    //ipLookup data
+    let ipLookupURL = "https://api.ipify.org/?format=json";
+    let ipLookupOptions = {};
+
+    //uses ajax to fetch IP in JSON format
+    getData(ipLookupURL, ipLookupOptions).then(function (result) {
+
+        //adding the IP number to weather URL for lookup    
+        let weatherLookUpURL = weatherURL + result.ip;
+        console.log(weatherLookUpURL);
+
+        //use the resulting IP number to look up weather
+        getData(weatherLookUpURL, weatherOptions).then(function (weatherResult) {
+            console.log(weatherResult);
+            updateWeather(weatherResult);
+        })
+
+
+
+    })
+
+    //make the location button show the modal popups
+    document.querySelector("#findLocation").addEventListener("click", function () {
+        document.body.classList.toggle("showModal");
+    })
+
+    document.querySelector("#locationForm").addEventListener("submit", function(event) {
+        
+        //stop form from submitting to server
+        event.preventDefault();
+        
+        document.body.classList.toggle("showModal");
+        let newLocation = document.querySelector("#locationBox").value;
+
+        //adding the passed value to weather URL for lookup    
+        let weatherLookUpURL = weatherURL + newLocation;
+        console.log(weatherLookUpURL);
+
+        //use the resulting IP number to look up weather
+        getData(weatherLookUpURL, weatherOptions).then(function(weatherResult) {
+
+            console.log(weatherResult);
+            updateWeather(weatherResult);
+        })
+
+
+
+    })
+
+
+
 
     let sampleURL = "https://tordevries.github.io/477/examples/ajax-api-test/current-forecast.js";
     let sampleOptions = {}
