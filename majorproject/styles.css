@@ -1,28 +1,20 @@
-.hero {
-  text-align: center;
-  margin-bottom: 40px;
+/* styles for the major project app called meal mind*/
+
+*box-sizing {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.hero input {
-  padding: 10px;
-  width: 250px;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
+    color: #111827;
+    line-height: 1.5;
 }
 
-.hero button {
-  padding: 10px;
-}
-
-#mealsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-}
-
-.meal-card img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.meal-card {
-  cursor: pointer;
+main {
+    max-width: 1rem;
+    margin: 0 auto;
+    padding 40px 20px;
 }
