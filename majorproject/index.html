@@ -17,7 +17,8 @@
     <script src="scripts.js" defer></script>
     <script>
         // in-page JavaScript here
-    </script>
+    </scriptU    <!-- icons for the nav bar -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
 </head>
 
@@ -32,10 +33,28 @@
             <h2>What do you want to eat today?</h2>
             <p>Find meals, plan your week, and simplify your routine.</p>
 
-            <div class="search">
-                <input type="text" id="searchInput" placeholder="Search meals..." />
-                <button id="searchBtn">Search</button>
+            <div class="hero-action">
+                <p class="today-label">Today’s Plan</p>
 
+                <div class="today-scroll">
+                    <div class="today-card">
+                        <img src="/majorproject/images/grilledchicken.jpg" alt="meal">
+                        <span class="meal-type">Lunch</span>
+                        <h3>Grilled Chicken Bowl</h3>
+                    </div>
+
+                    <div class="today-card">
+                        <img src="/majorproject/images/pestopasta.jpg" alt="meal">
+                        <span class="meal-type">Dinner</span>
+                        <h3>Pesto Pasta</h3>
+                    </div>
+
+                    <div class="today-card">
+                        <img src="/majorproject/images/fruitparfait.jpg" alt="meal">
+                        <span class="meal-type">Snack</span>
+                        <h3>Fruit Parfait</h3>
+                    </div>
+                </div>
             </div>
 
         </section>
@@ -74,6 +93,13 @@
 
             </div>
         </section>
+
+        <nav class="bottom-nav">
+            <span class="material-symbols-outlined nav-icon active">home</span>
+            <span class="material-symbols-outlined nav-icon">search</span>
+            <span class="material-symbols-outlined nav-icon">calendar_month</span>
+            <span class="material-symbols-outlined nav-icon">person</span>
+        </nav>
 
     </main>
 </body>
