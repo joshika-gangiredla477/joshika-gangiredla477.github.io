@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<body>
+    <main>
+
+        <section class="hero">
+            <h1>Search Meals</h1>
+
+            <div class="search-bar">
+                <span class="material-symbols-outlined">search</span>
+                <input type="text" placeholder="Search meals...">
+            </div>
+        </section>
+
+        <section class="recommended">
+            <h2>Results</h2>
+
+            <div id="mealsGrid">
+                <div class="mealCard">
+                    <div class="imageWrapper">
+                        <img src="images/grilledchicken.jpg">
+                    </div>
+                    <div class="mealName">Grilled Chicken Bowl</div>
+                    <div class="mealCategory">High Protein</div>
+                    <div class="kCal">kCal: 400</div>
+                </div>
+            </div>
+        </section>
+
+        <nav class="bottom-nav">
+            <a href="index.html">
+                <span class="material-symbols-outlined nav-icon">home</span>
+            </a>
+
+            <span class="material-symbols-outlined nav-icon active">search</span>
+
+            <a href="calendar.html">
+                <span class="material-symbols-outlined nav-icon">calendar_month</span>
+            </a>
+
+            <a href="profile.html">
+                <span class="material-symbols-outlined nav-icon">person</span>
+            </a>
+        </nav>
+
+    </main>
+</body>
+</html>

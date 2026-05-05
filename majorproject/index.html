@@ -17,12 +17,10 @@
     <script src="scripts.js" defer></script>
     <script>
         // in-page JavaScript here
-    </script>    <!-- icons for the nav bar -->
+    </script> <!-- icons for the nav bar -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
 </head>
-
-
 
 <body>
     <main>
@@ -33,37 +31,63 @@
             <h2>What do you want to eat today?</h2>
             <p>Find meals, plan your week, and simplify your routine.</p>
 
-            <div class="hero-action">
-                <p class="today-label">Today’s Plan</p>
+        </section>
 
-                <div class="today-scroll">
-                    <div class="today-card">
+        <!--TODAY'S MEALS-->
+        <div class="todayMeal">
+            <p class="today-label">Today's Plan</p>
+
+            <div class="today-scroll">
+                <div class="today-card">
+                    <div class="imageWrapper">
                         <img src="/majorproject/images/grilledchicken.jpg" alt="meal">
-                        <span class="meal-type">Lunch</span>
-                        <h3>Grilled Chicken Bowl</h3>
                     </div>
+                    <span class="meal-type">Lunch</span>
+                    <h3>Grilled Chicken Bowl</h3>
+                    <p>kCal: 200</p>
+                    <P>Time: 30min</P>
+                </div>
 
-                    <div class="today-card">
+                <div class="today-card">
+                    <div class="imageWrapper">
                         <img src="/majorproject/images/pestopasta.jpg" alt="meal">
-                        <span class="meal-type">Dinner</span>
-                        <h3>Pesto Pasta</h3>
                     </div>
+                    <span class="meal-type">Dinner</span>
+                    <h3>Pesto Pasta</h3>
+                    <p>kCal: 200</p>
+                    <P>Time: 30min</P>
+                </div>
 
-                    <div class="today-card">
+                <div class="today-card">
+                    <div class="imageWrapper">
                         <img src="/majorproject/images/fruitparfait.jpg" alt="meal">
-                        <span class="meal-type">Snack</span>
-                        <h3>Fruit Parfait</h3>
                     </div>
+                    <span class="meal-type">Snack</span>
+                    <h3>Fruit Parfait</h3>
+                    <p>kCal: 200</p>
+                    <P>Time: 30min</P>
                 </div>
             </div>
-
-        </section>
+        </div>
 
         <!-- RECOMMENDED MEALS -->
         <section class="recommended">
             <h2>Recommended for you</h2>
             <div id="mealsGrid">
                 <div class="mealCard">
+                    <div class="imageWrapper">
+                        <img src="/majorproject/images/grilledchicken.jpg" alt="meal">
+                    </div>
+                    <div class="mealName"> Chicken Bacon Swiss Sandwich </div>
+                    <div class="mealCategory"> Non-Vegeterian </div>
+                    <div class="kCal">kCal: 200</div>
+                    <div class="cookTime"> Time: 45min </div>
+                </div>
+
+                <div class="mealCard">
+                    <div class="imageWrapper">
+                        <img src="/majorproject/images/grilledchicken.jpg" alt="meal">
+                    </div>
                     <div class="mealName"> Pesto Pasta </div>
                     <div class="mealCategory"> Vegiterian </div>
                     <div class="kCal">kCal: 200</div>
@@ -71,6 +95,9 @@
                 </div>
 
                 <div class="mealCard">
+                    <div class="imageWrapper">
+                        <img src="/majorproject/images/grilledchicken.jpg" alt="meal">
+                    </div>
                     <div class="mealName"> Pesto Pasta </div>
                     <div class="mealCategory"> Vegiterian </div>
                     <div class="kCal">kCal: 200</div>
@@ -78,13 +105,9 @@
                 </div>
 
                 <div class="mealCard">
-                    <div class="mealName"> Pesto Pasta </div>
-                    <div class="mealCategory"> Vegiterian </div>
-                    <div class="kCal">kCal: 200</div>
-                    <div class="cookTime"> Time: 45min </div>
-                </div>
-
-                <div class="mealCard">
+                    <div class="imageWrapper">
+                        <img src="/majorproject/images/grilledchicken.jpg" alt="meal">
+                    </div>
                     <div class="mealName"> Pesto Pasta </div>
                     <div class="mealCategory"> Vegiterian </div>
                     <div class="kCal">kCal: 200</div>
@@ -95,10 +118,21 @@
         </section>
 
         <nav class="bottom-nav">
-            <span class="material-symbols-outlined nav-icon active">home</span>
-            <span class="material-symbols-outlined nav-icon">search</span>
+            <a href="/majorproject/index.html">
+                <span class="material-symbols-outlined nav-icon active">home</span>
+            </a>
+
+            <a href="/majorproject/search.html">
+                <span class="material-symbols-outlined nav-icon">search</span>
+            </a>
+            
+            <a href="/majorproject/calendar.html">
             <span class="material-symbols-outlined nav-icon">calendar_month</span>
+            </a>
+
+            <a href="/majorproject/profile.html">
             <span class="material-symbols-outlined nav-icon">person</span>
+            </a>
         </nav>
 
     </main>
