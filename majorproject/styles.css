@@ -58,6 +58,50 @@ main {
     
 }
 
+/*  TODAY HEADER LAYOUT  */
+.today-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/*  GENERAL ADD BUTTON */
+.add-btn {
+    border: 2px solid #141414;
+    background: #7d4bda;
+    border-radius: 999px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    color: #f8f8f8;
+}
+
+.add-btn span {
+    font-size: 22px;
+    line-height: 1; 
+}
+
+/* ===== CARD ADD BUTTON ===== */
+.card-add-btn {
+    margin-top: auto;
+    border: 1px solid #141414;
+    background: #e9ffda;
+    border-radius: 10px;
+    padding: 6px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-add-btn span {
+    font-size: 20px;
+}
+
 
 .today-label {
     font-size: 1.5rem;

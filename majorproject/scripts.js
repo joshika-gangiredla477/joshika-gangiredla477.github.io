@@ -1,6 +1,9 @@
 
 
-/* ========= SEARCH FUNCTION ========= */
+
+
+
+/* SEARCH FUNCTION */
 const searchInput = document.querySelector(".search-bar input");
 const mealCards = document.querySelectorAll(".mealCard");
 
@@ -19,11 +22,9 @@ if (searchInput) {
             }
         });
     });
-
-
 }
 
-/* ========= NAVBAR ACTIVE STATE ========= */
+/*  NAVBAR ACTIVE STATE */
 const navLinks = document.querySelectorAll(".bottom-nav a");
 
 navLinks.forEach(link => {
@@ -37,7 +38,7 @@ navLinks.forEach(link => {
 
 });
 
-/* ========= CALENDAR SYSTEM ========= */
+/*  CALENDAR SYSTEM  */
 const calendarGrid = document.getElementById("calendarGrid");
 const monthLabel = document.getElementById("monthLabel");
 const prevBtn = document.getElementById("prevMonth");
@@ -103,7 +104,7 @@ if (calendarGrid) {
     });
 
 
-    /* ========= ADD MEAL ON CLICK ========= */
+    /*  ADD MEAL ON CLICK  */
     calendarGrid.addEventListener("click", (e) => {
         const dayCard = e.target.closest(".day-card");
 
@@ -123,7 +124,7 @@ if (calendarGrid) {
 
 }
 
-/* ========= PROFILE BUTTON ========= */
+/* PROFILE BUTTON */
 const editBtn = document.querySelector(".edit-btn");
 
 if (editBtn) {
