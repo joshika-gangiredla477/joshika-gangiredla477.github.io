@@ -261,92 +261,165 @@ main {
     transform: scale(0.9);
 }
 
-/* Search Page */
+/* SEARCH BAR */
 
 .search-bar {
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin-top: 10px;
-    background: #fefdfc;
+    gap: 10px;
+    margin-top: 12px;
+    background: #ffffff;
     border: 2px solid #141414;
-    border-radius: 12px;
-    padding: 10px 12px;
+    border-radius: 14px;
+    padding: 12px 14px;
 }
 
 .search-bar input {
     border: none;
     outline: none;
     width: 100%;
-    font-size: 0.9rem;
     background: transparent;
+    font-size: 0.95rem;
 }
 
-/* SEARCH GRID (STACKED LIST) */
+/* SEARCH LIST */
+
+/* SEARCH GRID */
+
 .grid-layout {
     display: flex;
-    flex-direction: column; /* 👈 this is the key */
-    gap: 12px;
-    padding: 12px 0;
+    flex-direction: column;
+    gap: 14px;
+    padding: 16px 0;
 }
+
+/* CARD */
+
+.mealCard {
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    align-items: flex-start;
+    width: 100%;
+    padding: 12px;
+    background: #ffffff;
+    border: 2px solid #141414;
+    border-radius: 18px;
+}
+
+/* SEARCH PAGE CARD OVERRIDE */
 
 .grid-layout .mealCard {
     width: 100%;
     height: auto;
+
     display: flex;
-    flex-direction: row; 
-    gap: 12px;
-    align-items: center;
+    flex-direction: row;
+    align-items: flex-start;
+
     padding: 12px;
+    gap: 14px;
 }
 
-.grid-layout .imageWrapper {
-    width: 80px;
-    height: 80px;
+
+/* IMAGE */
+
+.mealCard .imageWrapper {
+    width: 90px;
+    height: 90px;
+    min-width: 90px;
+
     flex-shrink: 0;
+    aspect-ratio: unset;
+
+    border-radius: 12px;
+    overflow: hidden;
 }
 
-.grid-layout .mealName {
-    font-size: 1rem;
-    margin: 0;
+.mealCard .imageWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
+
+/* RIGHT SIDE */
+
+.mealInfo {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    min-width: 0;
+}
+
+/* TITLE */
+
+.mealName {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* CATEGORY + BUTTON ROW */
+
+.middleRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+/* CATEGORY */
+
+.mealCategory {
+    display: inline-block;
+    width: fit-content;
+
+    font-size: 0.72rem;
+    padding: 4px 8px;
+
+    background: #eef2ff;
+    color: #4f46e5;
+
+    border-radius: 999px;
+}
+
+/* META */
 
 .mealMeta {
     display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: auto; 
+    gap: 12px;
 }
 
-
-
-.grid-layout .mealCard {
-    justify-content: space-between;
+.kCal,
+.cookTime {
+    font-size: 0.8rem;
+    color: #4b5563;
 }
 
-
-.grid-layout .mealCategory {
-    font-size: 0.7rem;
-}
-
-.grid-layout .kCal,
-.grid-layout .cookTime {
-    font-size: 0.75rem;
-    color: #141414;
-    white-space: nowrap;
-} 
+/* BUTTON */
 
 .card-add-btn {
-    margin-left: auto;
-    border: 1px solid #141414;
-    background: #e9ffda;
+    width: 34px;
+    height: 34px;
+    border: 2px solid #141414;
     border-radius: 10px;
-    padding: 6px;
-    cursor: pointer;
+
+    background: #e9ffda;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
+    flex-shrink: 0;
 }
+
+.card-add-btn span {
+    font-size: 18px;
+}
+
 
 /* CALENDAR PAGE */
 
