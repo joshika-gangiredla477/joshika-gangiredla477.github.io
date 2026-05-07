@@ -83,7 +83,7 @@ if (calendarGrid) {
             if (Math.random() > 0.75) {
                 const meal = document.createElement("span");
                 meal.classList.add("meal-pill");
-                meal.textContent = "Meal";
+                meal.textContent = "";
                 day.appendChild(meal);
             }
 

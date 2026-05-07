@@ -84,7 +84,7 @@ main {
     line-height: 1; 
 }
 
-/* ===== CARD ADD BUTTON ===== */
+/* CARD ADD BUTTON */
 .card-add-btn {
     margin-top: auto;
     border: 1px solid #141414;
@@ -92,7 +92,6 @@ main {
     border-radius: 10px;
     padding: 6px;
     cursor: pointer;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -283,6 +282,72 @@ main {
     background: transparent;
 }
 
+/* SEARCH GRID (STACKED LIST) */
+.grid-layout {
+    display: flex;
+    flex-direction: column; /* 👈 this is the key */
+    gap: 12px;
+    padding: 12px 0;
+}
+
+.grid-layout .mealCard {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row; 
+    gap: 12px;
+    align-items: center;
+    padding: 12px;
+}
+
+.grid-layout .imageWrapper {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+}
+
+.grid-layout .mealName {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.mealMeta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto; 
+}
+
+
+
+.grid-layout .mealCard {
+    justify-content: space-between;
+}
+
+
+.grid-layout .mealCategory {
+    font-size: 0.7rem;
+}
+
+.grid-layout .kCal,
+.grid-layout .cookTime {
+    font-size: 0.75rem;
+    color: #141414;
+    white-space: nowrap;
+} 
+
+.card-add-btn {
+    margin-left: auto;
+    border: 1px solid #141414;
+    background: #e9ffda;
+    border-radius: 10px;
+    padding: 6px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* CALENDAR PAGE */
 
 .calendar {
@@ -308,9 +373,6 @@ main {
 
 /* Each day box */
 .day-card {
-    background: #fefdfc;
-    border: 2px solid #141414;
-    border-radius: 10px;
     min-height: 80px;
     padding: 6px;
     display: flex;

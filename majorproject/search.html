@@ -14,6 +14,7 @@
 <body>
     <main>
 
+        <!-- HERO / SEARCH -->
         <section class="hero">
             <h1>Search Meals</h1>
 
@@ -23,27 +24,103 @@
             </div>
         </section>
 
+        <!-- GRID RECOMMENDATIONS -->
         <section class="recommended">
-            <h2>Results</h2>
+            <h2>Explore Meals</h2>
+            <div id="mealsGrid" class="grid-layout">
 
-            <div id="mealsGrid">
+
+
+                <!-- CARD 1 -->
                 <div class="mealCard">
                     <div class="imageWrapper">
-                        <img src="images/grilledchicken.jpg">
+                        <img src="images/grilledchicken.jpg" alt="meal">
                     </div>
+
                     <div class="mealName">Grilled Chicken Bowl</div>
-                    <div class="mealCategory">High Protein</div>
-                    <div class="kCal">kCal: 400</div>
+
+                    <div class="mealMeta">
+                        <div class="mealCategory">High Protein</div>
+                        <div class="kCal">kCal: 400</div>
+                        <div class="cookTime">Time: 30min</div>
+                        <button class="card-add-btn">
+                            <span class="material-symbols-outlined">add</span>
+                        </button>
+                    </div>
                 </div>
+
+                <!-- CARD 2 -->
+                <div class="mealCard">
+                    <div class="imageWrapper">
+                        <img src="images/pestopasta.jpg" alt="meal">
+                    </div>
+
+                    <div class="mealName">Pesto Pasta</div>
+                    <div class="mealCategory">Vegetarian</div>
+
+                    <div class="mealMeta">
+                        <div class="kCal">kCal: 350</div>
+                        <div class="cookTime">Time: 25min</div>
+
+                        <button class="card-add-btn">
+                            <span class="material-symbols-outlined">add</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="mealCard">
+                    <div class="imageWrapper">
+                        <img src="images/fruitparfait.jpg" alt="meal">
+                    </div>
+
+                    <div class="mealName">Fruit Parfait</div>
+                    <div class="mealCategory">Snack</div>
+
+                    <div class="mealMeta">
+                        <div class="kCal">kCal: 200</div>
+
+                        <button class="card-add-btn">
+                            <span class="material-symbols-outlined">add</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="mealCard">
+                    <div class="imageWrapper">
+                        <img src="images/sandwich.jpg" alt="meal">
+                    </div>
+
+                    <div class="mealName">Chicken Sandwich</div>
+
+                    <div class="mealCategory">Quick Meal</div>
+
+                    <div class="mealMeta">
+                        <div class="kCal">kCal: 450</div>
+                        <div class="cookTime">Time: 15min</div>
+
+                        <button class="card-add-btn">
+                            <span class="material-symbols-outlined">add</span>
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
             </div>
         </section>
 
+        <!-- NAV -->
         <nav class="bottom-nav">
             <a href="index.html">
                 <span class="material-symbols-outlined nav-icon">home</span>
             </a>
 
-            <span class="material-symbols-outlined nav-icon active">search</span>
+            <a href="search.html">
+                <span class="material-symbols-outlined nav-icon active">search</span>
+            </a>
 
             <a href="calendar.html">
                 <span class="material-symbols-outlined nav-icon">calendar_month</span>
@@ -56,4 +133,5 @@
 
     </main>
 </body>
+
 </html>
