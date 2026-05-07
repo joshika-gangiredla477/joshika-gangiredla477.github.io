@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 
 <head>
@@ -8,58 +8,181 @@
 
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js" defer></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 
 <body>
+
     <main>
 
-<section class="calendar">
+        <!-- CALENDAR PAGE -->
+        <section class="calendar">
 
-    <!-- HEADER -->
-    <div class="calendar-header">
-        <button id="prevMonth">‹</button>
-        <h2 id="monthLabel">March 2026</h2>
-        <button id="nextMonth">›</button>
-    </div>
+            <!-- HEADER -->
+            <div class="calendar-header">
 
-    <!-- DAYS LABEL -->
-    <div class="calendar-days">
-        <div>Sun</div>
-        <div>Mon</div>
-        <div>Tue</div>
-        <div>Wed</div>
-        <div>Thu</div>
-        <div>Fri</div>
-        <div>Sat</div>
-    </div>
+                <button id="prevMonth">‹</button>
 
-    <!-- CALENDAR GRID -->
-    <div class="calendar-grid" id="calendarGrid">
+                <h2 id="monthLabel">March 2026</h2>
 
-       
-        <div class="day-card empty"></div>
-        <div class="day-card empty"></div>
+                <button id="nextMonth">›</button>
 
-        <div class="day-card">
-            <p class="date">1</p>
-            <span class="meal-pill">Chicken Bowl</span>
-        </div>
+            </div>
 
-        <div class="day-card">
-            <p class="date">2</p>
-            <span class="meal-pill">Pasta</span>
-            <span class="meal-pill">Salad</span>
-        </div>
+            <!-- DAYS -->
+            <div class="calendar-days">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
 
-       
+            <!-- CALENDAR GRID -->
+            <div class="calendar-grid" id="calendarGrid">
 
-    </div>
+                <!-- EMPTY SPACES -->
+                <div class="day-card empty"></div>
+                <div class="day-card empty"></div>
 
-</section>
+                <!-- DAYS -->
+                <div class="day-card active">
+                    <p class="date">1</p>
+                </div>
 
-        <!-- NAV -->
+                <div class="day-card">
+                    <p class="date">2</p>
+                </div>
+
+                <div class="day-card">
+                    <p class="date">3</p>
+                </div>
+
+                <div class="day-card">
+                    <p class="date">4</p>
+                </div>
+
+                <div class="day-card">
+                    <p class="date">5</p>
+                </div>
+
+                <div class="day-card">
+                    <p class="date">6</p>
+                </div>
+
+                <div class="day-card">
+                    <p class="date">7</p>
+                </div>
+
+                <div class="day-card">
+                    <p class="date">8</p>
+                </div>
+
+                <div class="day-card">
+                    <p class="date">9</p>
+                </div>
+
+                <div class="day-card">
+                    <p class="date">10</p>
+                </div>
+
+                <div class="day-card">
+                    <p class="date">11</p>
+                </div>
+
+                <div class="day-card">
+                    <p class="date">12</p>
+                </div>
+
+            </div>
+
+            <!-- SELECTED DAY PLAN -->
+            <section class="day-plan">
+
+                <div class="plan-header">
+
+                    <div>
+                        <p class="plan-date-label">Selected Day</p>
+                        <h3>March 1, 2026</h3>
+                    </div>
+
+                    <button class="add-btn">
+                        <span class="material-symbols-outlined">+</span>
+                    </button>
+
+                </div>
+
+                <!-- MEAL LIST -->
+                <div class="plan-list">
+
+                    <!-- BREAKFAST -->
+                    <div class="plan-item">
+
+                        <div class="plan-left">
+                            <p class="plan-label">Breakfast</p>
+                            <h4>Fruit Parfait</h4>
+                        </div>
+
+                        <div class="plan-right">
+                            <span class="plan-time">10 min</span>
+                        </div>
+
+                    </div>
+
+                    <!-- LUNCH -->
+                    <div class="plan-item">
+
+                        <div class="plan-left">
+                            <p class="plan-label">Lunch</p>
+                            <h4>Chicken Bowl</h4>
+                        </div>
+
+                        <div class="plan-right">
+                            <span class="plan-time">30 min</span>
+                        </div>
+
+                    </div>
+
+                    <!-- DINNER -->
+                    <div class="plan-item">
+
+                        <div class="plan-left">
+                            <p class="plan-label">Dinner</p>
+                            <h4>Pesto Pasta</h4>
+                        </div>
+
+                        <div class="plan-right">
+                            <span class="plan-time">25 min</span>
+                        </div>
+
+                    </div>
+
+                    <!-- SNACK -->
+                    <div class="plan-item">
+
+                        <div class="plan-left">
+                            <p class="plan-label">Snack</p>
+                            <h4>Protein Bar</h4>
+                        </div>
+
+                        <div class="plan-right">
+                            <span class="plan-time">5 min</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+        <!-- BOTTOM NAV -->
         <nav class="bottom-nav">
+
             <a href="index.html">
                 <span class="material-symbols-outlined nav-icon">home</span>
             </a>
@@ -69,16 +192,17 @@
             </a>
 
             <a href="calendar.html">
-
-            <span class="material-symbols-outlined nav-icon active">calendar_month</span>
-
+                <span class="material-symbols-outlined nav-icon active">calendar_month</span>
             </a>
 
             <a href="profile.html">
                 <span class="material-symbols-outlined nav-icon">person</span>
             </a>
+
         </nav>
 
     </main>
+
 </body>
+
 </html>

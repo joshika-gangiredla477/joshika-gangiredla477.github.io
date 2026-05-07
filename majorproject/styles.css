@@ -282,7 +282,6 @@ main {
     font-size: 0.95rem;
 }
 
-/* SEARCH LIST */
 
 /* SEARCH GRID */
 
@@ -421,53 +420,159 @@ main {
 }
 
 
+
 /* CALENDAR PAGE */
 
 .calendar {
-    padding: 0 20px;
+    padding: 20px;
 }
 
-/* Days of week row */
+/* HEADER */
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 18px;
+}
+
+.calendar-header h2 {
+    font-size: 1.2rem;
+}
+
+.calendar-header button {
+    width: 36px;
+    height: 36px;
+
+    border: 2px solid #141414;
+    border-radius: 10px;
+
+    background: white;
+    font-size: 1.2rem;
+}
+
+/* DAYS */
+
 .calendar-days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+
     text-align: center;
+    margin-bottom: 10px;
+
     font-size: 0.8rem;
-    margin-bottom: 8px;
     color: #6b7280;
 }
 
-/* Main grid */
+/* GRID */
+
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+
     gap: 8px;
 }
 
-/* Each day box */
+/* DAY */
+
 .day-card {
-    min-height: 80px;
-    padding: 6px;
+    aspect-ratio: 1 / 1;
+
+    border: 2px solid #141414;
+    border-radius: 12px;
+
+    background: white;
+
     display: flex;
-    flex-direction: column;
-    gap: 4px;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    transition: 0.2s ease;
 }
 
-/* Date number */
+/* EMPTY BOX */
+
+.day-card.empty {
+    background: transparent;
+    border: none;
+}
+
+/* ACTIVE DAY */
+
+.day-card.active {
+    background: #7d4bda;
+    color: white;
+}
+
+/* DATE */
+
 .date {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     font-weight: 600;
 }
 
-/* Meal tag inside day */
-.meal-pill {
-    font-size: 0.65rem;
-    background-color: #e9ffda;
-    padding: 3px 6px;
-    border-radius: 6px;
-    width: fit-content;
+/* PLAN SECTION */
+
+.day-plan {
+    margin-top: 24px;
+    background: #e9ffda;
+    border: 2px solid #141414;
+    border-radius: 18px;
+    padding: 16px;
 }
 
+/* PLAN HEADER */
+
+.plan-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 16px;
+}
+
+/* PLAN LIST */
+
+.plan-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* INDIVIDUAL PLAN */
+
+.plan-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border: 2px solid #141414;
+    border-radius: 12px;
+    background: #f8f8f8;
+}
+
+/* LABEL */
+
+.plan-label {
+    font-size: 0.72rem;
+    color: black;
+    margin-bottom: 2px;
+}
+
+/* MEAL NAME */
+
+.plan-item h4 {
+    font-size: 0.95rem;
+}
+
+/* TIME */
+
+.plan-time {
+    font-size: 0.8rem;
+    color: #6b7280;
+}
 /* PROFILE PAGE */
 
 .profile-card {
