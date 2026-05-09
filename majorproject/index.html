@@ -34,47 +34,17 @@
         </section>
 
         <!--TODAY'S MEALS-->
-        <div class="todayMeal">
 
+<div class="todayMeal">
             <div class="today-header">
                 <p class="today-label">Today's Plan</p>
-
                 <button class="add-btn" id="addTodayBtn">
                     <span class="material-symbols-outlined">+</span>
                 </button>
             </div>
-
-            <div class="today-scroll">
-                <div class="today-card">
-                    <div class="imageWrapper">
-                        <img src="/majorproject/images/grilledchicken.jpg" alt="meal">
-                    </div>
-                    <span class="meal-type">Lunch</span>
-                    <h3>Grilled Chicken Bowl</h3>
-                    <p>kCal: 200</p>
-                    <P>Time: 30min</P>
-
-                </div>
-
-                <div class="today-card">
-                    <div class="imageWrapper">
-                        <img src="/majorproject/images/pestopasta.jpg" alt="meal">
-                    </div>
-                    <span class="meal-type">Dinner</span>
-                    <h3>Pesto Pasta</h3>
-                    <p>kCal: 200</p>
-                    <P>Time: 30min</P>
-                </div>
-
-                <div class="today-card">
-                    <div class="imageWrapper">
-                        <img src="/majorproject/images/fruitparfait.jpg" alt="meal">
-                    </div>
-                    <span class="meal-type">Snack</span>
-                    <h3>Fruit Parfait</h3>
-                    <p>kCal: 200</p>
-                    <P>Time: 30min</P>
-                </div>
+            <!-- Inside <div class="todayMeal"> -->
+            <div class="today-scroll" id="todayScroll">
+                <!-- Cards will be injected here by JavaScript -->
             </div>
         </div>
 
@@ -82,7 +52,7 @@
         <section class="recommended">
             <h2>Recommended for you</h2>
             <div id="mealsGrid">
-                <div class="mealCard">
+                <div class="homeMealCard">
                     <div class="imageWrapper">
                         <img src="/majorproject/images/grilledchicken.jpg" alt="meal">
                     </div>
@@ -95,7 +65,7 @@
                     </button>
                 </div>
 
-                <div class="mealCard">
+                <div class="homeMealCard">
                     <div class="imageWrapper">
                         <img src="/majorproject/images/grilledchicken.jpg" alt="meal">
                     </div>
@@ -108,7 +78,7 @@
                     </button>
                 </div>
 
-                <div class="mealCard">
+                <div class="homeMealCard">
                     <div class="imageWrapper">
                         <img src="/majorproject/images/grilledchicken.jpg" alt="meal">
                     </div>
@@ -121,7 +91,7 @@
                     </button>
                 </div>
 
-                <div class="mealCard">
+                <div class="homeMealCard">
                     <div class="imageWrapper">
                         <img src="/majorproject/images/grilledchicken.jpg" alt="meal">
                     </div>
@@ -138,19 +108,19 @@
         </section>
 
         <nav class="bottom-nav">
-            <a href="/majorproject/index.html">
+            <a href="index.html">
                 <span class="material-symbols-outlined nav-icon active">home</span>
             </a>
 
-            <a href="/majorproject/search.html">
+            <a href="search.html">
                 <span class="material-symbols-outlined nav-icon">search</span>
             </a>
 
-            <a href="/majorproject/calendar.html">
+            <a href="calendar.html">
                 <span class="material-symbols-outlined nav-icon">calendar_month</span>
             </a>
 
-            <a href="/majorproject/profile.html">
+            <a href="profile.html">
                 <span class="material-symbols-outlined nav-icon">person</span>
             </a>
         </nav>

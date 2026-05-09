@@ -58,6 +58,24 @@ main {
     
 }
 
+/* Ensure the bar stays visible and clean when empty */
+.today-scroll {
+    min-height: 10px; /* Gives it a tiny bit of space even when empty */
+    transition: all 0.3s ease;
+}
+
+/* Centering logic for the label inside the header bar */
+.today-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.today-label {
+    margin-bottom: 0; /* Override your 10px margin to keep it centered vertically */
+}
+
 /*  TODAY HEADER LAYOUT  */
 .today-header {
     display: flex;
@@ -175,40 +193,98 @@ main {
     padding: 0 20px;
 }
 
+/* HOME RECOMMENDED SECTION */
+
 #mealsGrid {
     display: flex;
-    gap: 15px;
+    gap: 16px;
     overflow-x: auto;
-    padding: 16px 0px;
+
+    padding: 16px 0;
+
     scroll-snap-type: x mandatory;
 }
 
-.mealCard {
-    width: 240px;          
-    height: 320px;         
+/* HOMEPAGE CARD */
+
+.homeMealCard {
+    width: 230px;
+    min-width: 230px;
+
+    background: white;
     border: 2px solid #141414;
-    flex-shrink: 0;       
-    background-color: #fefdfc;
-    color: #111827;
     border-radius: 18px;
+
     padding: 14px;
-    scroll-snap-align: start;
+
     display: flex;
     flex-direction: column;
-    gap: 6px;
-    overflow: hidden;      
+    gap: 10px;
+
+    scroll-snap-align: start;
+
+    flex-shrink: 0;
 }
 
-.mealCard .imageWrapper {
+/* IMAGE */
+
+.homeMealCard .imageWrapper {
     width: 100%;
-    height: 140px; 
-    aspect-ratio: auto;
+    height: 150px;
+
+    border-radius: 12px;
+    overflow: hidden;
 }
 
-.mealCard .imageWrapper img {
+.homeMealCard .imageWrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* TEXT */
+
+.homeMealCard .mealName {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.homeMealCard .mealCategory {
+    width: fit-content;
+
+    background: #eef2ff;
+    color: #4f46e5;
+
+    padding: 4px 8px;
+    border-radius: 999px;
+
+    font-size: 0.72rem;
+}
+
+.homeMealCard .mealMeta {
+    display: flex;
+    gap: 10px;
+
+    font-size: 0.8rem;
+    color: #4b5563;
+}
+
+/* BUTTON */
+
+.homeMealCard .card-add-btn {
+    margin-top: auto;
+
+    width: 36px;
+    height: 36px;
+
+    border: 2px solid #141414;
+    border-radius: 10px;
+
+    background: #e9ffda;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .mealName {
