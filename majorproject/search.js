@@ -82,9 +82,7 @@ function displayRandomMeals(mealObject) {
         </div>
 
         `;
-
     }
-
 }
 
 /* DISPLAY SEARCH RESULTS */

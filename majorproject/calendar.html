@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -7,7 +7,7 @@
     <title>Calendar</title>
 
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
+    <script src="calendar.js" defer></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
@@ -24,7 +24,7 @@
 
                 <button id="prevMonth">‹</button>
 
-                <h2 id="monthLabel">March 2026</h2>
+                <h2 id="monthLabel"></h2>
 
                 <button id="nextMonth">›</button>
 
@@ -42,62 +42,7 @@
             </div>
 
             <!-- CALENDAR GRID -->
-            <div class="calendar-grid" id="calendarGrid">
-
-                <!-- EMPTY SPACES -->
-                <div class="day-card empty"></div>
-                <div class="day-card empty"></div>
-
-                <!-- DAYS -->
-                <div class="day-card active">
-                    <p class="date">1</p>
-                </div>
-
-                <div class="day-card">
-                    <p class="date">2</p>
-                </div>
-
-                <div class="day-card">
-                    <p class="date">3</p>
-                </div>
-
-                <div class="day-card">
-                    <p class="date">4</p>
-                </div>
-
-                <div class="day-card">
-                    <p class="date">5</p>
-                </div>
-
-                <div class="day-card">
-                    <p class="date">6</p>
-                </div>
-
-                <div class="day-card">
-                    <p class="date">7</p>
-                </div>
-
-                <div class="day-card">
-                    <p class="date">8</p>
-                </div>
-
-                <div class="day-card">
-                    <p class="date">9</p>
-                </div>
-
-                <div class="day-card">
-                    <p class="date">10</p>
-                </div>
-
-                <div class="day-card">
-                    <p class="date">11</p>
-                </div>
-
-                <div class="day-card">
-                    <p class="date">12</p>
-                </div>
-
-            </div>
+            <div class="calendar-grid" id="calendarGrid"></div>
 
             <!-- SELECTED DAY PLAN -->
             <section class="day-plan">
@@ -106,7 +51,7 @@
 
                     <div>
                         <p class="plan-date-label">Selected Day</p>
-                        <h3>March 1, 2026</h3>
+                        <h3></h3>
                     </div>
 
                     <button class="add-btn">
@@ -116,69 +61,33 @@
                 </div>
 
                 <!-- MEAL LIST -->
-                <div class="plan-list">
-
-                    <!-- BREAKFAST -->
-                    <div class="plan-item">
-
-                        <div class="plan-left">
-                            <p class="plan-label">Breakfast</p>
-                            <h4>Fruit Parfait</h4>
-                        </div>
-
-                        <div class="plan-right">
-                            <span class="plan-time">10 min</span>
-                        </div>
-
-                    </div>
-
-                    <!-- LUNCH -->
-                    <div class="plan-item">
-
-                        <div class="plan-left">
-                            <p class="plan-label">Lunch</p>
-                            <h4>Chicken Bowl</h4>
-                        </div>
-
-                        <div class="plan-right">
-                            <span class="plan-time">30 min</span>
-                        </div>
-
-                    </div>
-
-                    <!-- DINNER -->
-                    <div class="plan-item">
-
-                        <div class="plan-left">
-                            <p class="plan-label">Dinner</p>
-                            <h4>Pesto Pasta</h4>
-                        </div>
-
-                        <div class="plan-right">
-                            <span class="plan-time">25 min</span>
-                        </div>
-
-                    </div>
-
-                    <!-- SNACK -->
-                    <div class="plan-item">
-
-                        <div class="plan-left">
-                            <p class="plan-label">Snack</p>
-                            <h4>Protein Bar</h4>
-                        </div>
-
-                        <div class="plan-right">
-                            <span class="plan-time">5 min</span>
-                        </div>
-
-                    </div>
-
-                </div>
-
+                <div class="plan-list"></div>
             </section>
 
         </section>
+
+        <!-- POPUP SEARCH -->
+<div id="mealPopup" class="popup hidden">
+
+    <div class="popup-box">
+
+        <div class="popup-header">
+            <h3>Search Meal</h3>
+            <button id="closePopup">×</button>
+        </div>
+
+        <div class="popup-search">
+            <input type="text" id="popupInput" placeholder="Search meals...">
+            <button id="popupSearchBtn">Search</button>
+        </div>
+
+        <div id="popupResults"></div>
+
+    </div>
+
+</div>
+
+
 
         <!-- BOTTOM NAV -->
         <nav class="bottom-nav">
